@@ -1,0 +1,37 @@
+@use '../../../styles/variables' as variables
+
+.section-home-wrapper
+  min-height: calc(100vh - variables.$headerHeight)
+  margin-top: variables.$headerHeight
+  scroll-margin-top: variables.$headerHeight
+  background-color: variables.$ivory
+
+.section-home-container
+  min-height: calc(100vh - variables.$headerHeight)
+
+.section-home-row
+  min-height: calc(100vh - variables.$headerHeight)
+
+.section-home-left
+  min-height: calc(100vh - variables.$headerHeight)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.section-home-right
+  min-height: calc(100vh - variables.$headerHeight)
+  display: flex
+  justify-content: center
+  align-items: end
+
+.section-home-image
+  height: 80vh
+
+.section-home-header1
+  text-transform: capitalize
+  font-family: variables.$headerFont
+
+.section-home-header2
+  text-transform: uppercase
+  font-family: variables.$headerFont
