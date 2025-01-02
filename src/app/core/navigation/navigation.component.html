@@ -1,3 +1,31 @@
 <header>
-  <h1>Header 1</h1>
+  <nav id="app-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#sectionHome">
+        <img src="/images/logo_no_background.ico" alt="Logo" style="width: auto; height: 53px">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-sm-0 mx-auto">
+          <li *ngFor="let navItem of availableSections" class="nav-item">
+            <a class="nav-link" [href]="navItem.link">{{navItem.label}}</a>
+          </li>
+        </ul>
+        <div *ngIf="availableSocialMedia.length" class="social-media-links">
+          <a *ngFor="let socialMediaItem of availableSocialMedia" [href]="socialMediaItem.link">
+            <fa-icon [icon]="socialMediaItem.icon"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
