@@ -26,7 +26,7 @@ export class NavigationComponent {
   readonly availableSections: NavItem[]= [
     {link: '#sectionHome', label: 'domů'},
     {link: '#sectionServices', label: 'služby'},
-    {link: 'sectionAboutMe', label: 'o mě'},
+    {link: '#sectionAbout', label: 'o mě'},
     {link: '#sectionGallery', label: 'galerie'},
     {link: '#sectionContact', label: 'kontakt'}
   ]
