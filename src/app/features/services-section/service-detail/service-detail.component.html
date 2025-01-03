@@ -1,0 +1,8 @@
+<div *ngIf="service$ | async as service" class="service-detail-wrapper">
+  <div class="container">
+    <div class="text-center">
+      <h1>{{ service.name }}</h1>
+      <p>{{ service.longDescription }}</p>
+    </div>
+  </div>
+</div>

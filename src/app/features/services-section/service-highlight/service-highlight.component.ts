@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Service} from '../services-section.component';
 import {NgIf} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-service-highlight',
@@ -10,5 +11,13 @@ import {NgIf} from '@angular/common';
 })
 export class ServiceHighlightComponent {
   @Input() service!: Service;
+
+  constructor(private readonly router: Router) {
+  }
+
+  goToServiceDetail(serviceName: string): void {
+    console.log('===goToServiceDetail');
+    this.router.navigate(['/service', serviceName])
+  }
 
 }

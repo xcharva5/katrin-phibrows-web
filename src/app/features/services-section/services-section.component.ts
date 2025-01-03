@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgFor} from '@angular/common';
 import {ServiceHighlightComponent} from './service-highlight/service-highlight.component';
+import {RouterLink} from '@angular/router';
 
 export interface Service {
   name: string;
@@ -10,7 +11,7 @@ export interface Service {
 
 @Component({
   selector: 'app-services-section',
-  imports: [NgFor, ServiceHighlightComponent],
+  imports: [NgFor, ServiceHighlightComponent, RouterLink],
   templateUrl: './services-section.component.html',
   styleUrl: './services-section.component.sass'
 })

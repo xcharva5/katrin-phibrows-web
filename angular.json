@@ -26,6 +26,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": [
+              "src/assets/data",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -88,6 +89,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "sass",
             "assets": [
+              "src/assets/data",
               {
                 "glob": "**/*",
                 "input": "public"
