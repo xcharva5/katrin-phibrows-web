@@ -1,3 +1,8 @@
 <section id="sectionServices" class="section-services-wrapper">
-  services section
+  <div class="container">
+    <h1 class="section-services-header text-center">Služby</h1>
+    <div *ngFor="let service of services" style="border: 1px solid black; padding: 10px">
+      <app-service-highlight [service]="service"></app-service-highlight>
+    </div>
+  </div>
 </section>
