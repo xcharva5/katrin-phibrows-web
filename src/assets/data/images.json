@@ -1,0 +1,26 @@
+[
+  {
+    "src": "/images/pred_zakrokem.jpg",
+    "alt": "Před zákrokem",
+    "caption": "Před zákrokem",
+    "description": "Před zákrokem text"
+  },
+  {
+    "src": "/images/po_zakroku.jpg",
+    "alt": "Po zákroku",
+    "caption": "Po zákroku",
+    "description": "Po zákroku text"
+  },
+  {
+    "src": "/images/zakres_sablony.jpg",
+    "alt": "Zákres šablony",
+    "caption": "Zákres šablony",
+    "description": "Zákres šablony text"
+  },
+  {
+    "src": "/images/dalsi_foto.jpg",
+    "alt": "Další foto",
+    "caption": "Další foto",
+    "description": "Další foto text"
+  }
+]

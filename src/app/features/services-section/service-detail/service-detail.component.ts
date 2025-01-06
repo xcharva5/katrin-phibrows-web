@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService, Service} from '../../../shared/services/data.service';
+import {DataService} from '../../../shared/services/data.service';
 import {ActivatedRoute} from '@angular/router';
 import {Observable, of} from 'rxjs';
 import {AsyncPipe, NgIf} from '@angular/common';
+import {Service} from '../../../shared/models/models';
 
 @Component({
   selector: 'app-service-detail',
