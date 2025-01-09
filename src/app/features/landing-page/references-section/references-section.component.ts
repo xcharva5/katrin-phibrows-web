@@ -5,12 +5,12 @@ import {Observable, of} from 'rxjs';
 import {AsyncPipe, CommonModule, NgFor, NgIf} from '@angular/common';
 
 @Component({
-  selector: 'app-gallery-section',
+  selector: 'app-references-section',
   imports: [NgIf, AsyncPipe, NgFor, CommonModule],
-  templateUrl: './gallery-section.component.html',
-  styleUrl: './gallery-section.component.sass'
+  templateUrl: './references-section.component.html',
+  styleUrl: './references-section.component.sass'
 })
-export class GallerySectionComponent {
+export class ReferencesSectionComponent {
   images$: Observable<Image[] | undefined> = of(undefined);
 
   constructor(
