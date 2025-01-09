@@ -1,10 +1,45 @@
 @use '../../../styles/variables' as variables
 
 .section-contact-wrapper
-  min-height: calc(100vh - variables.$headerHeight)
-  scroll-margin-top: variables.$headerHeight
-  padding: 20px 0
   background-color: variables.$ivory
+  font-family: variables.$textFont
+  font-size: 1.2em
+  color: variables.$gold
 
-.section-contact-header
-  font-family: variables.$headerFont
+.section-contact-left
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px 0
+
+.contact-info a
+  color: variables.$gold
+  text-decoration: none
+
+.contact-info a:hover
+  color: variables.$anthracite
+
+.section-contact-left fa-icon
+  color: variables.$gold
+
+.contact-info fa-icon
+  padding-right: 10px
+
+.social-media-links fa-icon
+  padding-right: 20px
+
+.social-media-links fa-icon:hover
+  color: variables.$anthracite
+
+.section-contact-right
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 300px
+  width: 100%
+
+.section-contact-right img
+  height: 80%
+  width: auto
+  object-fit: cover
+  opacity: 0.5

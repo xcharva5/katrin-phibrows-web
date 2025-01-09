@@ -1,5 +1,41 @@
+<!-- TODO: change contact info, links to social media, better logo resolution -->
 <section id="sectionContact" class="section-contact-wrapper">
   <div class="container">
-    <h1 class="section-contact-header text-center">Kontakt</h1>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-contact-left">
+          <div class="contact-info">
+            <p>
+              <fa-icon [icon]="faUser"></fa-icon>
+              <strong>Ing. Kateřina Nováková</strong>
+            </p>
+            <p>
+              <fa-icon [icon]="faHouse"></fa-icon>
+              <a href="https://en.mapy.cz/zakladni?source=addr&id=11746163&ds=1&x=16.7699161&y=48.9557216&z=16" target="_blank">
+                <span>Kurdějov 272, 693 01 Kurdějov</span>
+              </a>
+            </p>
+            <p>
+              <fa-icon [icon]="faPhone"></fa-icon>
+              <a href="tel:+420 123 456 789">+420 123 456 789</a>
+            </p>
+            <p>
+              <fa-icon [icon]="faAt"></fa-icon>
+              <a href="mailto:katie.nov@seznam.cz">katie.nov&#64;seznam.cz</a>
+            </p>
+            <div class="social-media-links">
+              <a href="#"><fa-icon [icon]="faInstagram" size="2x" class="section-contact-link"></fa-icon></a>
+              <a href="#"><fa-icon [icon]="faFacebook" size="2x"></fa-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="section-contact-right">
+          <img src="/images/logo_no_background.png" alt="Logo">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
