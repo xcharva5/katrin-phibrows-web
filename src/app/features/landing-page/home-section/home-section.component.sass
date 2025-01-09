@@ -1,16 +1,35 @@
 @use '../../../../styles/variables' as variables
 
+@keyframes slideFromLeft
+  from
+    left: -300px
+    opacity: 0
+
+  to
+    left: 0
+    opacity: 1
+
+@keyframes slideFromRight
+  from
+    right: 300px
+    opacity: 0
+
+  to
+    left: 0
+    opacity: 1
+
+@keyframes gradient-animation
+  0%
+    background-position: 0
+  50%
+    background-position: 100%
+  100%
+    background-position: 0
+
 .section-home-wrapper
-  min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
-  scroll-margin-top: variables.$headerHeight
   background-color: variables.$ivory
-
-.section-home-container
-  min-height: calc(100vh - variables.$headerHeight)
-
-.section-home-row
-  min-height: calc(100vh - variables.$headerHeight)
+  overflow: hidden
 
 .section-home-left
   min-height: calc(100vh - variables.$headerHeight)
@@ -18,21 +37,55 @@
   flex-direction: column
   justify-content: center
   align-items: center
+  position: relative
+  left: -300px
+  opacity: 0
+  animation: slideFromLeft 0.8s ease-in-out
+  animation-fill-mode: forwards
+
+.section-home-left img
+  max-width: 50%
+  height: auto
+  opacity: 0.35
+
+.section-home-left h1, h2
+  text-transform: capitalize
+  font-family: variables.$headerFont
+  background: linear-gradient(90deg, variables.$gold, variables.$darkGold)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+
+.section-home-left button
+  font-family: variables.$textFont
+  font-size: 1.4em
+  border: none
+  color: variables.$ivory
+  padding: 10px
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+  background: linear-gradient(90deg, variables.$gold, variables.$darkGold, variables.$gold)
+  background-size: 300%
+
+.section-home-left button:hover
+  color: variables.$ivory
+  background-position: right
+  transform: scale(1.05)
+  animation: gradient-animation 3s infinite
+
+.section-home-left button:active
+  transform: scale(1)
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
 
 .section-home-right
-  min-height: calc(100vh - variables.$headerHeight)
   display: flex
   justify-content: center
   align-items: end
+  position: relative
+  left: 500px
+  opacity: 0
+  animation: slideFromRight 0.8s ease-in-out
+  animation-fill-mode: forwards
 
-.section-home-image
+.section-home-right img
+  max-height: calc(100vh - variables.$headerHeight)
   max-width: 100%
-  height: auto
-
-.section-home-header1
-  text-transform: capitalize
-  font-family: variables.$headerFont
-
-.section-home-header2
-  text-transform: uppercase
-  font-family: variables.$headerFont
