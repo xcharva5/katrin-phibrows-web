@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {NgFor} from '@angular/common';
-import {ServiceHighlightComponent} from './service-highlight/service-highlight.component';
+import {ServiceHighlightComponent} from '../../services/service-highlight/service-highlight.component';
 import {RouterLink} from '@angular/router';
 
 export interface Service {

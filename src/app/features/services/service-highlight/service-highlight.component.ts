@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Service} from '../services-section.component';
+import {Service} from '../../landing-page/services-section/services-section.component';
 import {NgIf} from '@angular/common';
 import {Router} from '@angular/router';
 
