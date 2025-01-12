@@ -20,6 +20,7 @@ export interface Image {
 export interface Service {
   name: string,
   shortDescription: string,
-  longDescription: string,
+  longDescription: string[],
+  highlightImage: Image,
   images: Image[]
 }

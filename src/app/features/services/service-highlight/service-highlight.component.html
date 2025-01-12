@@ -1,7 +1,13 @@
-<div *ngIf="service" class="service-highlight-wrapper" (click)="goToServiceDetail(service.name)">
-  <h1 class="service-highlight-header text-center">{{ service.name }}</h1>
-  <div class="row">
-    <p class="service-highlight-description col-lg-9">{{ service.description }}</p>
-    <img [src]="'/images/' + service.image" alt="img desc" class="col-lg-3">
+<div *ngIf="service" class="card mb-3" (click)="goToServiceDetail(service.name)">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="service.highlightImage.src" [alt]="service.highlightImage.alt" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ service.name }}</h5>
+        <p class="card-text">{{ service.shortDescription }}</p>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,15 +1,29 @@
 @use '../../../../styles/variables' as variables
 
-.service-highlight-wrapper
-  border: 1px solid black
-  padding: 10px
+:host
+  width: 100%
+  border: none
 
-.service-highlight-wrapper:hover
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)
+.card
+  background-color: variables.$white
 
-.service-highlight-header
+.card .card-title
+  font-size: 2em
+  text-transform: uppercase
+  letter-spacing: -1px
+  font-weight: 600
   font-family: variables.$headerFont
 
-.service-highlight-description
+.card .card-text
+  font-size: 1.4em
+  font-weight: 150
   font-family: variables.$textFont
-  font-size: 1.3em
+
+.card:hover
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2)
+  transform: scale(1.005)
+  transition: transform 0.1s ease-in-out
+
+.card:active
+  transform: scale(1)
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)

@@ -1,17 +1,6 @@
-<section id="sectionServices" class="section-services-wrapper">
+<section class="section-services-wrapper">
   <div class="container">
     <h1 class="section-services-header text-center">Služby</h1>
-    <div *ngFor="let service of services">
-      <app-service-highlight
-        *ngFor="let service of services"
-        [service]="service"
-        class="btn cursor-pointer">
-      </app-service-highlight>
-    </div>
-    <div class="text-center pt-3">
-      <a routerLink="/price-list">
-        <button class="btn btn-dark">Ceník</button>
-      </a>
-    </div>
+    <app-service-list></app-service-list>
   </div>
 </section>

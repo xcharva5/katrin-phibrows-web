@@ -1,0 +1,20 @@
+@keyframes slideFromBottom
+  from
+    top: 100px
+    opacity: 0
+
+  to
+    top: 0
+    opacity: 1
+
+app-service-highlight
+  cursor: pointer
+  opacity: 0
+  position: relative
+  top: 100px
+
+app-service-highlight.visible
+  top: 0
+  animation: slideFromBottom 0.8s ease-in-out
+  animation-fill-mode: forwards
+

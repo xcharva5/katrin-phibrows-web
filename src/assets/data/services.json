@@ -1,14 +1,36 @@
 [
   {
-    "name": "Microblading",
+    "name": "microblading",
     "shortDescription": "Microblading nebo také vláskování obočí je jednou z technik permanentního make-upu. Tato metoda zvýrazňuje přirozený vzhled obočí a zintenzivní jeho tvar.",
-    "longDescription": "Microblading nebo také vláskování obočí je jednou z technik permanentního make-upu. Tato metoda zvýrazňuje přirozený vzhled obočí a zintenzivní jeho tvar. Jedná se o speciální techniku, při které se pomocí čepelky s jehličkami vykreslují jednotlivé chloupky do vrchních vrstev kůže v přesně dané struktuře. Výsledkem je velice přirozeně vypadající obočí. Tetované chloupky jsou k nerozeznání od těch přírodních a vy tak ušetříte každý den čas s domalováváním a vyměřováním obočí. Nejedná se o klasické tetování, které vám vydrží navěky. Microblading vydrží asi rok až rok a půl - vše však záleží na typu vaší pleti a na péči, kterou dodržujete po zákroku.",
+    "longDescription": [
+      "Microblading nebo také vláskování obočí je jednou z technik permanentního make-upu. Tato metoda zvýrazňuje přirozený vzhled obočí a zintenzivní jeho tvar. Jedná se o speciální techniku, při které se pomocí čepelky s jehličkami vykreslují jednotlivé chloupky do vrchních vrstev kůže v přesně dané struktuře.",
+      "Výsledkem je velice přirozeně vypadající obočí. Tetované chloupky jsou k nerozeznání od těch přírodních a vy tak ušetříte každý den čas s domalováváním a vyměřováním obočí.",
+      "Nejedná se o klasické tetování, které vám vydrží navěky. Microblading vydrží asi rok až rok a půl - vše však záleží na typu vaší pleti a na péči, kterou dodržujete po zákroku."
+    ],
+    "highlightImage": {
+      "src": "images/microblading.jpg",
+      "alt": "Microblading",
+      "caption": "Microblading",
+      "description": "Microblading"
+    },
     "images": [
       {
-        "src": "",
-        "alt": "",
-        "caption": "",
-        "description": ""
+        "src": "images/pred_zakrokem.jpg",
+        "alt": "Microblading - před zákrokem",
+        "caption": "Microblading - před zákrokem",
+        "description": "Microblading - před zákrokem"
+      },
+      {
+        "src": "images/po_zakroku.jpg",
+        "alt": "Microblading - po zákroku",
+        "caption": "Microblading - po zákroku",
+        "description": "Microblading - po zákroku"
+      },
+      {
+        "src": "images/zakres_sablony.jpg",
+        "alt": "Microblading - zákres šablony",
+        "caption": "Microblading - zákres šablony",
+        "description": "Microblading - zákres šablony"
       }
     ]
   }

@@ -1,27 +1,31 @@
 import { Component } from '@angular/core';
-import {NgFor} from '@angular/common';
-import {ServiceHighlightComponent} from '../../services/service-highlight/service-highlight.component';
-import {RouterLink} from '@angular/router';
-
-export interface Service {
-  name: string;
-  description: string;
-  image: string;
-}
+import {ServiceListComponent} from '../../services/service-list/service-list.component';
 
 @Component({
   selector: 'app-services-section',
-  imports: [NgFor, ServiceHighlightComponent, RouterLink],
+  imports: [ServiceListComponent],
   templateUrl: './services-section.component.html',
   styleUrl: './services-section.component.sass'
 })
 export class ServicesSectionComponent {
-  public services: Service[] = [
-    {
-      name: 'microblading',
-      description: 'Microblading nebo také vláskování obočí je jednou z technik permanentního make-upu. Tato metoda zvýrazňuje přirozený vzhled obočí a zintenzivní jeho tvar.',
-      image: 'microblading.jpg'
-    }
-  ]
+  constructor() {
+    document.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector(".section-services-header");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Stop observing after animation is triggered
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px -100px 0px 0px' });
+
+      if (header) {
+        observer.observe(header);
+      }
+    });
+
+  }
 
 }

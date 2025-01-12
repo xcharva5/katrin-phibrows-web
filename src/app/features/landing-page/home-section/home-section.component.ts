@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-home-section',
   imports: [],
   templateUrl: './home-section.component.html',
-  styleUrl: './home-section.component.sass'
+  styleUrl: './home-section.component.sass',
+  standalone: true
 })
 export class HomeSectionComponent {
 

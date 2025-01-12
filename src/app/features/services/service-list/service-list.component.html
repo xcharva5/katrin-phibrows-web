@@ -1,0 +1,7 @@
+<div *ngIf="services$ | async as services">
+  <app-service-highlight
+    *ngFor="let service of services"
+    [appVisibleClass]="'visible'"
+    [service]="service">
+  </app-service-highlight>
+</div>

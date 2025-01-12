@@ -1,10 +1,34 @@
 @use '../../../../styles/variables' as variables
 
+//@keyframes slideFromBottom
+//  from
+//    top: 100px
+//    opacity: 0
+//
+//  to
+//    top: 0
+//    opacity: 1
+
 .section-services-wrapper
-  min-height: calc(100vh - variables.$headerHeight)
-  scroll-margin-top: variables.$headerHeight
-  padding: 20px 0
+  //min-height: calc(100vh - variables.$headerHeight)
+  padding: 30px 0
   background-color: variables.$beige
 
 .section-services-header
   font-family: variables.$headerFont
+  color: variables.$darkGray
+  font-size: 3em
+  letter-spacing: 5px
+  //position: relative
+  //top: 100px
+  //opacity: 0
+  //animation: slideFromBottom 0.8s ease-in-out
+  //animation-fill-mode: forwards
+  opacity: 0
+  transform: translateY(100px)
+  transition: opacity 0.5s ease, transform 0.5s ease
+  will-change: opacity, transform
+
+.section-services-header.visible
+  opacity: 1
+  transform: translateY(0)

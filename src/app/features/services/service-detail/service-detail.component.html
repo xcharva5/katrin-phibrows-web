@@ -2,7 +2,51 @@
   <div class="container">
     <div class="text-center">
       <h1>{{ service.name }}</h1>
-      <p>{{ service.longDescription }}</p>
+
+      <div *ngFor="let paragraph of service.longDescription">
+        <p>{{ paragraph }}</p>
+      </div>
+
+      <!-- TODO: exclude image carousel to separated component -->
+      <div class="carousel-wrapper">
+        <div *ngIf="service.images" id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              *ngFor="let image of service.images; let i=index"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              [attr.data-bs-slide-to]="i"
+              [ngClass]="{'active': i === 0}"
+              [attr.aria-current]="i === 0"
+              [attr.aria-label]="image.caption">
+            </button>
+          </div>
+
+          <div class="carousel-inner">
+            <div
+              *ngFor="let image of service.images; let i=index"
+              class="carousel-item"
+              [ngClass]="{'active': i === 0}"
+              data-bs-interval="5000"
+            >
+              <img [src]="image.src" class="d-block w-100" [alt]="image.alt">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{ image.caption }}</h5>
+                <p>{{ image.description }}</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Předchozí</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Další</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
