@@ -24,3 +24,14 @@ export interface Service {
   highlightImage: Image,
   images: Image[]
 }
+
+export interface Certificate {
+  certifier: string,
+  name: string,
+  details: string
+}
+export interface PersonalInfo {
+  text: string[],
+  image: Image,
+  certificates: Certificate[]
+}

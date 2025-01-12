@@ -1,14 +1,95 @@
 @use '../../../../styles/variables' as variables
 
+@keyframes slideFromBottom
+  from
+    top: 100px
+    opacity: 0
+
+  to
+    top: 0
+    opacity: 1
+
+@keyframes gradient-animation
+  0%
+    background-position: 0
+  50%
+    background-position: 100%
+  100%
+    background-position: 0
+
 .section-about-wrapper
   min-height: calc(100vh - variables.$headerHeight)
-  scroll-margin-top: variables.$headerHeight
   padding: 20px 0
   background-color: variables.$ivory
 
 .section-about-header
   font-family: variables.$headerFont
+  color: variables.$darkGray
+  font-size: 3em
+  letter-spacing: 5px
+  opacity: 0
+  position: relative
+  top: 100px
+
+.section-about-header.visible
+  top: 0
+  animation: slideFromBottom 0.8s ease-in-out
+  animation-fill-mode: forwards
 
 .section-about-image
-  max-width: 70%
+  max-width: 60%
   height: auto
+
+.about-section-left
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  opacity: 0
+  position: relative
+  top: 100px
+
+.about-section-left.visible
+  top: 0
+  animation: slideFromBottom 0.8s ease-in-out
+  animation-fill-mode: forwards
+
+.about-section-left p
+  font-size: 1.3em
+
+.about-section-left button
+  font-family: variables.$textFont
+  font-size: 1.4em
+  border: none
+  color: variables.$ivory
+  padding: 10px
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+  background: linear-gradient(90deg, variables.$gold, variables.$darkGold, variables.$gold)
+  background-size: 300%
+
+.about-section-left button:hover
+  color: variables.$ivory
+  background-position: right
+  transform: scale(1.05)
+  animation: gradient-animation 3s infinite
+
+.about-section-left button:active
+  transform: scale(1)
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+
+.about-section-right
+  display: flex
+  justify-content: center
+  align-items: end
+  opacity: 0
+  position: relative
+  top: 100px
+  padding: 20px 0
+
+.about-section-right.visible
+  top: 0
+  animation: slideFromBottom 0.8s ease-in-out
+  animation-fill-mode: forwards
+
+.about-section-right img
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)

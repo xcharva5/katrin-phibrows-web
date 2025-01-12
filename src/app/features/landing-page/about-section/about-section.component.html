@@ -1,24 +1,20 @@
-<section id="sectionAbout" class="section-about-wrapper">
+<!-- TODO: add the image in different sizes to prevent downloading of big res img -->
+<section *ngIf="personalInfo$ | async as personalInfo" class="section-about-wrapper">
   <div class="container">
-    <h1 class="section-about-header text-center">O mě</h1>
+    <h1 class="section-about-header text-center" [appVisibleClass]="'visible'">O mě</h1>
     <div class="row">
-      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center" style="font-size: 1.5em">
-        <div>
-          <p>Jmenuji se Kateřina Nováková a věnuji se technice microblading obočí. Kurz jsem absolvovala pod
-            záštitou Phi Academy, což je největší a nejuznávanější akademie ve světě permanentního make upu.</p>
-          <p>Líbí se mi, že tato technika zvýraznění a vymodelování obočí Vám dokáže zkrátit čas strávený před
-            zrcadlem barvením a dokreslováním nedokonalostí. Vaše tvář získá výraznější, přesto stále velice
-            přirozený výraz. Ráno, když vstanete nebo půjdete do bazénu, sauny nebo sportovat, obočí budete
-            mít stále krásně upravené.</p>
+      <div class="col-lg-6 about-section-left" [appVisibleClass]="'visible'">
+        <div *ngFor="let paragraph of personalInfo.text">
+          <p>{{ paragraph }}</p>
         </div>
         <div>
           <a href="#">
-            <button class="btn btn-dark">Certifikáty</button>
+            <button class="btn btn-dark">Více o mě</button>
           </a>
         </div>
       </div>
-      <div class="col-lg-6 d-flex justify-content-center align-items-end">
-        <img src="/images/katka.jpg" alt="Kateřina Nováková" class="section-about-image">
+      <div class="col-lg-6 about-section-right" [appVisibleClass]="'visible'">
+        <img [src]="personalInfo.image.src" [alt]="personalInfo.image.alt" class="section-about-image">
       </div>
     </div>
   </div>
