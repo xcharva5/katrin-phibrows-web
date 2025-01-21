@@ -17,7 +17,7 @@ export class ServiceHighlightComponent {
   }
 
   goToServiceDetail(serviceName: string): void {
-    this.router.navigate(['/service', serviceName])
+    this.router.navigate(['/sluzby', serviceName])
   }
 
 }
