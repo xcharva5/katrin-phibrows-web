@@ -16,7 +16,7 @@ export class NavigationComponent {
 
   readonly availableSections: LinkLabelItem[]= [
     {link: '#', label: 'Domů'},
-    {link: '#', label: 'Služby'},
+    {link: 'sluzby', label: 'Služby'},
     {link: '#', label: 'O mě'},
     {link: '#', label: 'Reference'},
     {link: '#', label: 'Kontakt'}

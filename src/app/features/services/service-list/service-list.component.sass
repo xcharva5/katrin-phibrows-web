@@ -1,3 +1,5 @@
+@use '../../../../styles/variables' as variables
+
 @keyframes slideFromBottom
   from
     top: 100px
@@ -6,6 +8,14 @@
   to
     top: 0
     opacity: 1
+
+@keyframes gradient-animation
+  0%
+    background-position: 0
+  50%
+    background-position: 100%
+  100%
+    background-position: 0
 
 app-service-highlight
   cursor: pointer
@@ -17,4 +27,37 @@ app-service-highlight.visible
   top: 0
   animation: slideFromBottom 0.8s ease-in-out
   animation-fill-mode: forwards
+
+.service-list-buttons
+  display: flex
+  justify-content: center
+  margin-top: 20px
+  opacity: 0
+  position: relative
+  top: 100px
+
+.service-list-buttons.visible
+  top: 0
+  animation: slideFromBottom 0.8s 0.1s ease-in-out forwards
+
+.service-list-buttons button
+  font-family: variables.$textFont
+  font-size: 1.4em
+  border: none
+  color: variables.$ivory
+  padding: 10px 25px
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+  background: linear-gradient(90deg, variables.$gold, variables.$darkGold, variables.$gold)
+  background-size: 300%
+
+.service-list-buttons button:hover
+  color: variables.$ivory
+  background-position: right
+  transform: scale(1.05)
+  animation: gradient-animation 3s infinite
+
+.service-list-buttons button:active
+  transform: scale(1)
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+
 
