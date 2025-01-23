@@ -1,0 +1,37 @@
+@use '../../../../styles/variables' as variables
+
+.price-list-wrapper
+  min-height: calc(100vh - variables.$headerHeight)
+  margin-top: variables.$headerHeight
+  background-color: variables.$ivory
+
+.price-list-header
+  font-family: variables.$headerFont
+  color: variables.$darkGray
+  font-size: 3em
+  letter-spacing: 5px
+  margin-bottom: 15px
+
+.price-list-table-wrapper
+  display: flex
+  justify-content: center
+
+.price-list-wrapper table
+  width: 70%
+  border: 3px solid variables.$darkGray
+  font-size: 1.5em
+  font-family: variables.$textFont
+
+.price-list-wrapper table tr:nth-child(even)
+  background-color: variables.$beige
+
+.price-list-wrapper table tr:nth-child(odd)
+  background-color: variables.$ivory
+
+.price-list-wrapper table td
+  padding: 10px
+  border: 1px solid variables.$darkGray
+
+@media only screen and (max-width: 992px)
+  .price-list-wrapper table
+    width: 100%

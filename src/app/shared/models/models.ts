@@ -35,3 +35,8 @@ export interface PersonalInfo {
   image: Image,
   certificates: Certificate[]
 }
+
+export interface PriceListItem {
+  name: string,
+  price: string
+}

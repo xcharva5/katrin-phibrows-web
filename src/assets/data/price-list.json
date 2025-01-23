@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Konzultace",
+    "price": "ZDARMA"
+  },
+  {
+    "name": "Microblading obočí",
+    "price": "4.000 Kč"
+  },
+  {
+    "name": "Korekce 1-3 měsíce po zákroku",
+    "price": "1.500 Kč"
+  },
+  {
+    "name": "Korekce 3-6 měsíců po zákroku",
+    "price": "2.500 Kč"
+  },
+  {
+    "name": "Obnova obočí (pokud byl zákrok proveden u mě)",
+    "price": "3.500 Kč"
+  }
+]
