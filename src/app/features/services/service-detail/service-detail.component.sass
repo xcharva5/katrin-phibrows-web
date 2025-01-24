@@ -1,9 +1,20 @@
 @use '../../../../styles/variables' as variables
 
+@keyframes gradient-animation
+  0%
+    background-position: 0
+  50%
+    background-position: 100%
+  100%
+    background-position: 0
+
 .service-detail-wrapper
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
+  padding-bottom: 40px
   background-color: variables.$ivory
+  font-family: variables.$textFont
+  font-size: 1.1em
 
 h1
   font-family: variables.$headerFont
@@ -11,10 +22,6 @@ h1
   font-weight: 600
   text-transform: uppercase
   padding-top: 10px
-
-p
-  font-family: variables.$textFont
-  font-size: 1.1em
 
 .carousel-wrapper
   display: flex
@@ -25,3 +32,94 @@ p
   width: 60%
   max-height: 300px
   height: 300px
+
+@media only screen and (max-width: 992px)
+  .carousel
+    width: 100%
+
+.accordion
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.accordion > li
+  list-style: none
+  width: 100%
+  margin: 20px 0
+  padding: 10px
+  border-radius: 8px
+  background-color: variables.$beige
+  color: variables.$darkGray
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+
+.accordion > li fa-icon
+  padding-right: 5px
+
+.accordion li label
+  display: flex
+  align-items: center
+  padding: 10px
+  font-size: 2em
+  font-weight: 600
+  cursor: pointer
+  font-family: variables.$headerFont
+
+label::before
+  content: '+'
+  margin-right: 10px
+  font-size: 1.3em
+  font-weight: 600
+
+input[type='radio']
+  display: none
+
+.accordion .content
+  padding: 0 10px
+  line-height: 26px
+  max-height: 0
+  overflow: hidden
+  transition: max-height 0.5s, padding 0.5s
+
+.accordion .content ul
+  list-style-type: none
+  margin-bottom: 10px
+
+.accordion input[type='radio']:checked + label + .content
+  max-height: 1000px
+  padding: 10px 10px 20px
+
+.accordion input[type='radio']:checked + label::before
+  content: '-'
+
+.accordion .content h2
+  font-family: variables.$headerFont
+  text-transform: uppercase
+  font-size: 1.7em
+  letter-spacing: -1px
+  font-weight: 600
+
+.service-detail-buttons
+  display: flex
+  justify-content: center
+  margin-top: 40px
+
+.service-detail-buttons button
+  font-family: variables.$textFont
+  font-size: 1.4em
+  border: none
+  color: variables.$ivory
+  padding: 10px 25px
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+  background: linear-gradient(90deg, variables.$gold, variables.$darkGold, variables.$gold)
+  background-size: 300%
+
+.service-detail-buttons button:hover
+  color: variables.$ivory
+  background-position: right
+  transform: scale(1.05)
+  animation: gradient-animation 3s infinite
+
+.service-detail-buttons button:active
+  transform: scale(1)
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+

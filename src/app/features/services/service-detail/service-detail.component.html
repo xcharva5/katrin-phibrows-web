@@ -1,7 +1,7 @@
 <div *ngIf="service$ | async as service" class="service-detail-wrapper">
   <div class="container">
-    <div class="text-center">
-      <h1>{{ service.name }}</h1>
+    <div class="">
+      <h1 class="text-center">{{ service.name }}</h1>
 
       <div *ngFor="let paragraph of service.longDescription">
         <p>{{ paragraph }}</p>
@@ -46,6 +46,116 @@
             <span class="visually-hidden">Další</span>
           </button>
         </div>
+      </div>
+
+      <!-- TODO: obtain these data from JSON file -->
+
+      <div>
+        <ul class="accordion">
+          <li>
+            <input type="radio" name="accordion" id="first">
+            <label for="first">Co je potřeba vědět předem</label>
+            <div class="content text-start">
+              <p>Microblading je skvělá metoda jak zkrášlit obočí a oživit tak celou tvář. Ale protože, stejně jako
+                tetování, se jedná o zásah do kůže, není bohužel pro každého.</p>
+              <p>Vše záleží na zdravotním stavu a také typu kůže. Pro extrémně mastnou pleť není tato metoda
+                vhodná, protože zvýšená mastivost kůže způsobuje zešednutí tetovaných chloupků a výsledek pak
+                nevypadá hezky.</p>
+              <p>Co se týká zdravotního stavu, tak zákrok není možné provádět v těchto případech:</p>
+              <ul>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>těhotenství</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>kojení (po ukončení kojení počkat alespoň 2 měsíce, dokud se neustálí hladina hormonů)</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>keloidní jizvy</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>epilepsie</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>imunodeficience a onkologičtí pacienti v léčbě (aplikace je možná nejdříve 6 měsíců po léčbě)</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>jakékoliv infekční onemocnění</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>virová hepatitida, AIDS, zánět spojivek, onemocněním dýchacího traktu, různými virózami,
+                  ale i například rýmou</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>nemoci krve</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>klienti s poruchami srážlivosti krve, či jinými nemocemi krve nemohou PMU podstoupit</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>užívání antibiotik (aplikace je možná po 10 dnech dobrání antibiotik)</li>
+                <li><fa-icon [icon]="faAnglesRight"></fa-icon>lymfedém</li>
+              </ul>
+              <p>Pokud užíváte jakékoliv léky, je nutné je při objednávání zákroku ohlásit. I při užívání některých léků
+                není vhodné zákrok provádět.</p>
+              <p>V úvodu aplikace spolu vyplníme informovaný souhlas - projdeme jednotlivé body, celá procedura
+                musí být pro obě strany především bezpečná.</p>
+              <ul>
+                <li>
+                  <fa-icon [icon]="faTriangleExclamation"></fa-icon>
+                  <strong>24 hodin před zákrokem prosím nekonzumujte žádný alkohol nebo energetické nápoje.</strong>
+                </li>
+                <li>
+                  <fa-icon [icon]="faTriangleExclamation"></fa-icon>
+                  <strong>10 dní před zákrokem nenavštěvujte solárium a nebarvěte si obočí.</strong>
+                </li>
+                <li>
+                  <fa-icon [icon]="faTriangleExclamation"></fa-icon>
+                  <strong>
+                    4 týdny před zákrokem nepodstupujte chemický peeling, laserové ošetření, aplikaci botoxu a výplní
+                    čela a vystavení silnému slunečnímu světlu. Kůže nesmí být v zánětlivém procesu. Tyto chemické
+                    procesy mohou nepříznivě ovlivnit výsledek tetování.
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <input type="radio" name="accordion" id="second">
+            <label for="second">Průběh zákroku</label>
+            <div class="content">
+              <div>
+                <h2>Zákres formy</h2>
+                <p>Je potřeba si na celou proceduru rezervovat dostatek času - cca 3 hodiny protože nejprve si
+                  vytvoříme tzv. formu - tj. tvar který bude finálně obočí mít. Forma se vyměřuje kompasem, což je
+                  speciální &quot;pravítko&quot; kterým se přesně určí dané body na obočí (je jich šest) a musí jako celek
+                  harmonovat s tvarem obličeje a respektovat růst Vašeho obočí - proto neexistuje žádná šablona
+                  kterou bychom obkeslili na obličej. Takto vytvořenou formu potom ještě finálně před samotným
+                  zákrokem zkontroluji pomocí speciální aplikace a můžeme začít.</p>
+                <p>Forma vždy působí mohutněji, než bude finální výsledek. Vždy pracuji pouze v prostoru tohoto
+                  zákresu a obočí se ještě po zahojení zúží - cca o 20 %.</p>
+              </div>
+              <div>
+                <h2>Vláskování, vlastní tetování</h2>
+                <p>Dalším krokem je už vlastní tetování. Jemně nařežeme celou strukturu obočí, pracujeme povrchově
+                  proto také obočí vyrobené touto metodou nevydrží věčně a řadí se mezi semi-permanentní metody.
+                  Každý tetovaný chlup má svoje přesné umístění a tvar. Ve fázi následující použijeme anestetikum
+                  začneme jednotlivé chloupky vyplňovat pigmentem.</p>
+                <p>Takto máme práci dokončenou. Je důležité mít na paměti že obočí se po vyhojení o 20 % zúží a o 30
+                  % zesvětlá takže ideální stav je, když se Vám bude zdát, že ihned po zákroku je obočí výrazné a širší,
+                  než byste chtěla. Po vyhojení pak bude výsledek podle Vaší představy.</p>
+              </div>
+              <div>
+                <h2>Péče bezprostředně po tetování</h2>
+                <p>S sebou domů Vám dám v tištěné podobě pokyny, jak se o nové obočí starat. Obdržíte také speciální
+                  ubrousky na otírání obočí během prvního dne a krém, který je určen pro péči v následujících sedmi
+                  dnech. Vše Vám ještě vysvětlím po proceduře a budeme se moct ptát na to, co Vás zajímá nebo čemu
+                  nerozumíte.</p>
+              </div>
+              <div>
+                <h2>Hojení</h2>
+                <p>Relativně dlouhý proces kdy první dny obočí vypadá tmavší než potřebujeme. Poté se začne asi po
+                  týdnu loupat a po 14ti dnech dokonce vypadá velice světle a dokonce možná i flekatě. Zhruba do měsíce
+                  se ale kůže  zregeneruje a barva se krásně ukotví v té správné hloubce. Obočí je ve své
+                  konečné podobě a může přijít poslední fáze zákroku, kterou je korekce.</p>
+              </div>
+              <div>
+                <h2>Korekce</h2>
+                <p>Nejdříve je možné provádět korekci cca po 6-8 týdnech. Korekce již nebývá tak časově náročná, jde o
+                  poupravení některých chloupků, popř. dotvoření nových, které chybí k dokonalému tvaru. Po
+                  zahojení se také stává, že některé části pigmentu jsou uchyceny málo nebo vůbec. Při korekci se
+                  právě tato místa obnoví.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="service-detail-buttons">
+        <a href="/sluzby/cenik">
+          <button class="btn">Ceník</button>
+        </a>
       </div>
     </div>
   </div>

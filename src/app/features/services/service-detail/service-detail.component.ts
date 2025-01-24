@@ -4,10 +4,12 @@ import {ActivatedRoute} from '@angular/router';
 import {Observable, of} from 'rxjs';
 import {AsyncPipe, CommonModule, NgForOf, NgIf} from '@angular/common';
 import {Service} from '../../../shared/models/models';
+import {faAnglesRight, faTriangleExclamation} from '@fortawesome/free-solid-svg-icons';
+import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-service-detail',
-  imports: [AsyncPipe, NgIf, NgForOf, CommonModule],
+  imports: [AsyncPipe, NgIf, NgForOf, CommonModule, FaIconComponent],
   templateUrl: './service-detail.component.html',
   styleUrl: './service-detail.component.sass',
   standalone: true
@@ -15,6 +17,9 @@ import {Service} from '../../../shared/models/models';
 export class ServiceDetailComponent implements OnInit {
   serviceName = '';
   service$: Observable<Service | undefined> = of(undefined);
+
+  readonly faAnglesRight = faAnglesRight;
+  readonly faTriangleExclamation = faTriangleExclamation;
 
   constructor(
     private readonly dataService: DataService,
