@@ -1,0 +1,75 @@
+@use '../../../styles/variables' as variables
+
+.about-wrapper
+  min-height: calc(100vh - variables.$headerHeight)
+  margin-top: variables.$headerHeight
+  background-color: variables.$ivory
+  padding-bottom: 40px
+  font-family: variables.$textFont
+  opacity: 0
+  position: relative
+  top: 100px
+
+.about-wrapper.visible
+  top: 0
+  animation: slideFromBottom 0.8s ease-in-out
+  animation-fill-mode: forwards
+
+.about-header
+  font-family: variables.$headerFont
+  color: variables.$darkGray
+  font-size: 3em
+  letter-spacing: 5px
+
+@keyframes slideFromBottom
+  from
+    top: 100px
+    opacity: 0
+
+  to
+    top: 0
+    opacity: 1
+
+.about-image
+  max-width: 60%
+  height: auto
+
+.about-left
+  display: flex
+  flex-direction: column
+  justify-content: start
+  align-items: center
+
+.about-left p
+  font-size: 1.3em
+
+.about-right
+  display: flex
+  justify-content: center
+  align-items: end
+  //padding: 20px 0
+
+.about-right img
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+
+.about-certificates h2
+  margin-top: 30px
+  font-family: variables.$headerFont
+  text-transform: uppercase
+  font-size: 2em
+  letter-spacing: -1px
+  font-weight: 600
+
+.about-certificates ul
+  margin-bottom: 0
+  list-style-type: none
+
+.about-certificates li
+  font-size: 1.5em
+
+.about-certificates a
+  text-decoration: none
+  color: variables.$darkGray
+
+.about-certificates a:hover
+  color: variables.$gold

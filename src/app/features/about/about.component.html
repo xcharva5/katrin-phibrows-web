@@ -1,0 +1,28 @@
+<div class="about-wrapper" [appVisibleClass]="'visible'">
+  <div class="container">
+    <h1 class="about-header text-center">O mě</h1>
+    <!-- TODO: add the image in different sizes to prevent downloading of big res img -->
+    <div *ngIf="personalInfo$ | async as personalInfo" class="about-content-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-left">
+            <div *ngFor="let paragraph of personalInfo.text">
+              <p>{{ paragraph }}</p>
+            </div>
+          </div>
+          <div class="col-lg-6 about-right">
+            <img [src]="personalInfo.image.src" [alt]="personalInfo.image.alt" class="about-image">
+          </div>
+        </div>
+        <div class="about-certificates text-center">
+          <h2>Certifikáty</h2>
+          <ul>
+            <li *ngFor="let certificate of personalInfo.certificates">
+              <a [href]="certificate.link" target="_blank">{{ certificate.certifier }} - {{ certificate.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

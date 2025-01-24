@@ -28,7 +28,8 @@ export interface Service {
 export interface Certificate {
   certifier: string,
   name: string,
-  details: string
+  details: string,
+  link: string
 }
 export interface PersonalInfo {
   text: string[],
