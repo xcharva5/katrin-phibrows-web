@@ -19,7 +19,7 @@ export class NavigationComponent {
     {link: '', label: 'Domů'},
     {link: 'sluzby', label: 'Služby'},
     {link: 'o-me', label: 'O mě'},
-    {link: '#', label: 'Reference'},
+    // {link: '#', label: 'Reference'},
     {link: '#', label: 'Kontakt'}
   ]
 

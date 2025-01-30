@@ -1,20 +1,47 @@
 @use '../../../../styles/variables' as variables
 
-.section-gallery-wrapper
-  min-height: calc(100vh - variables.$headerHeight)
+.section-references-wrapper
+  //min-height: calc(100vh - variables.$headerHeight)
   scroll-margin-top: variables.$headerHeight
   padding: 20px 0
   background-color: variables.$beige
 
-.section-gallery-header
+.section-references-header
   font-family: variables.$headerFont
+  color: variables.$darkGray
+  font-size: 3em
+  letter-spacing: 5px
 
-#galleryCarousel
-  width: 80%
-  margin: auto
-  height: calc(100vh - variables.$headerHeight - 88px)
+.references-testimonials
+  display: flex
+  align-items: center
 
-#galleryCarousel .carousel-inner img
-  object-fit: cover
-  height: calc(100vh - variables.$headerHeight - 88px)
-  width: 100%
+.references-testimonials .card
+  min-height: 200px
+  margin: 10px auto
+  font-family: variables.$textFont
+  font-size: 1.2em
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+
+.card-body
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.references-images
+  display: flex
+  align-items: center
+  margin: 10px 0
+
+.carousel-inner
+  height: 400px
+  background-color: variables.$anthracite
+
+.carousel-item
+  height: 400px
+  background-color: variables.$anthracite
+
+.carousel-item-image-wrapper
+  display: flex
+  align-items: center
+  height: 100%

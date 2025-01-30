@@ -4,11 +4,10 @@ import {PersonalInfo} from '../../shared/models/models';
 import {DataService} from '../../shared/services/data.service';
 import {AsyncPipe, NgFor, NgIf} from '@angular/common';
 import {VisibleClassDirective} from '../../shared/directives/visible-class.directive';
-import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-about',
-  imports: [NgIf, NgFor, AsyncPipe, VisibleClassDirective, RouterLinkActive, RouterLink],
+  imports: [NgIf, NgFor, AsyncPipe, VisibleClassDirective],
   templateUrl: './about.component.html',
   styleUrl: './about.component.sass',
   standalone: true

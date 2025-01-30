@@ -1,7 +1,74 @@
-<section id="sectionGallery" class="section-gallery-wrapper">
+<section id="sectionGallery" class="section-references-wrapper">
   <div class="container">
-    <h1 class="section-gallery-header text-center">Galerie</h1>
-
-
+    <h1 class="section-references-header text-center">Reference</h1>
+    <div class="row">
+      <div class="col-xl-6 references-testimonials">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <fa-icon [icon]="faQuoteLeft" size="3x"></fa-icon>
+                <p class="card-text mt-3">Tady bude zpětná vazba prvního zákazníka. Tady bude zpětná vazba prvního zákazníka. </p>
+                <p class="text-end fst-italic">Zákazník č.1</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <fa-icon [icon]="faQuoteLeft" size="3x"></fa-icon>
+                <p class="card-text mt-3">Tady bude zpětná vazba druhého zákazníka. Tady bude zpětná vazba druhého zákazníka. </p>
+                <p class="text-end fst-italic">Zákazník č.2</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <fa-icon [icon]="faQuoteLeft" size="3x"></fa-icon>
+                <p class="card-text mt-3">Tady bude zpětná vazba třetího zákazníka. Tady bude zpětná vazba třetího zákazníka. </p>
+                <p class="text-end fst-italic">Zákazník č.3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 references-images">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-item-image-wrapper">
+                <img src="/images/po_zakroku.jpg" class="d-block w-100" alt="Po zákroku">
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-item-image-wrapper">
+                <img src="/images/dalsi_foto.jpg" class="d-block w-100" alt="Další foto">
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
