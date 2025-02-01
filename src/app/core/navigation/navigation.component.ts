@@ -3,13 +3,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { NgFor, NgIf } from '@angular/common';
 import { LinkIconItem, LinkLabelItem } from '../../shared/models/models';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   imports: [FontAwesomeModule, NgFor, NgIf, RouterLink, RouterLinkActive],
   templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.sass'
+  styleUrl: './navigation.component.sass',
+  standalone: true
 })
 export class NavigationComponent {
   readonly faInstagram = faInstagram;

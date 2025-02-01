@@ -1,10 +1,9 @@
-<!-- TODO: I'd replace the navigation logo by something simpler, like only text -->
-<!-- TODO: social media links -->
+<!-- TODO: add social media links -->
 <header>
   <nav id="app-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="/images/logo_no_background.ico" alt="Logo" style="width: auto; height: 53px">
+        <h1>Katrin Phibrows</h1>
       </a>
       <button
         class="navbar-toggler"
@@ -19,7 +18,9 @@
       <div id="navbarContent" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto mb-2 mb-sm-0 mx-auto">
           <li *ngFor="let navItem of availableSections" class="nav-item">
-            <a class="nav-link" [routerLink]="navItem.link" routerLinkActive="active">{{navItem.label}}</a>
+            <a class="nav-link" [routerLink]="navItem.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              {{navItem.label}}
+            </a>
           </li>
         </ul>
         <div *ngIf="availableSocialMedia.length" class="social-media-links">
