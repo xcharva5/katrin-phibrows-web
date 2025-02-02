@@ -51,23 +51,14 @@
   letter-spacing: 3px
 
 .section-home-left button
-  font-family: variables.$textFont
-  font-size: 1.5em
-  border: none
-  color: variables.$ivory
-  padding: 10px
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
-  background: linear-gradient(90deg, variables.$gold, variables.$darkGold, variables.$gold)
-  background-size: 300%
+  @include variables.animatedButton
 
 .section-home-left button:hover
-  background-position: right
-  transform: scale(1.05)
   @include animations.gradientTextAnimation
+  @include variables.animatedButtonHover
 
 .section-home-left button:active
-  transform: scale(1)
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+  @include variables.animatedButtonActive
 
 .section-home-right
   display: flex

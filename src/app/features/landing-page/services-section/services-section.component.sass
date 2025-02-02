@@ -1,27 +1,13 @@
 @use '../../../../styles/variables' as variables
-
-@keyframes slideFromBottom
-  from
-    top: 100px
-    opacity: 0
-
-  to
-    top: 0
-    opacity: 1
+@use '../../../../styles/animations' as animations
 
 .section-services-wrapper
   padding: 30px 0
   background-color: variables.$beige
 
-.section-services-header
-  font-family: variables.$headerFont
-  color: variables.$darkGray
-  font-size: 3em
-  letter-spacing: 5px
-  opacity: 0
-  position: relative
-  top: 100px
+.section-services-wrapper h1
+  @include variables.sectionHeader
+  @include variables.preparedForSlideFromBottom
 
-.section-services-header.visible
-  top: 0
-  animation: slideFromBottom 0.8s ease-in-out forwards
+.section-services-wrapper h1.visible
+  @include animations.slideFromBottom

@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
-import {AsyncPipe, NgFor, NgIf} from '@angular/common';
-import {ServiceHighlightComponent} from '../service-highlight/service-highlight.component';
-import {Service} from '../../../shared/models/models';
-import {DataService} from '../../../shared/services/data.service';
-import {Observable} from 'rxjs';
-import {VisibleClassDirective} from '../../../shared/directives/visible-class.directive';
+import { Component } from '@angular/core';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
+import { ServiceHighlightComponent } from '../service-highlight/service-highlight.component';
+import { Service } from '../../../shared/models/models';
+import { DataService } from '../../../shared/services/data.service';
+import { Observable } from 'rxjs';
+import { VisibleClassDirective } from '../../../shared/directives/visible-class.directive';
 
 @Component({
   selector: 'app-service-list',

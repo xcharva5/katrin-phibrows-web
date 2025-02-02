@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ServiceListComponent} from '../../services/service-list/service-list.component';
-import {VisibleClassDirective} from '../../../shared/directives/visible-class.directive';
+import { ServiceListComponent } from '../../services/service-list/service-list.component';
+import { VisibleClassDirective } from '../../../shared/directives/visible-class.directive';
 
 @Component({
   selector: 'app-services-section',

@@ -21,3 +21,35 @@ $additionalFont: Montserrat, serif
 
 /* WEBSITE-WIDE VALUES */
 $headerHeight: 79px
+
+/* MIXINS */
+@mixin sectionHeader
+  font-family: $headerFont
+  color: $darkGray
+  text-align: center
+  font-size: 3.5em
+  margin-bottom: 15px
+  letter-spacing: 8px
+
+@mixin preparedForSlideFromBottom
+  opacity: 0
+  position: relative
+  top: 100px
+
+@mixin animatedButton
+  font-family: $textFont
+  font-size: 1.5em
+  color: $ivory
+  border: none
+  padding: 10px
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+  background: linear-gradient(90deg, $gold, $darkGold, $gold)
+  background-size: 300%
+
+@mixin animatedButtonHover
+  background-position: right
+  transform: scale(1.05)
+
+@mixin animatedButtonActive
+  transform: scale(1)
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)

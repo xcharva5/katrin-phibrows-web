@@ -5,6 +5,9 @@
 @mixin slideFromRight
   animation: slideFromRight 0.8s ease-in-out forwards
 
+@mixin slideFromBottom
+  animation: slideFromBottom 0.8s ease-in-out forwards
+
 @mixin gradientTextAnimation
   animation: gradientTextAnimation 3s infinite
 
@@ -27,6 +30,16 @@
 
   to
     right: 0
+    opacity: 1
+
+/* slide from bottom */
+@keyframes slideFromBottom
+  from
+    top: 100px
+    opacity: 0
+
+  to
+    top: 0
     opacity: 1
 
 /* gradient text animation */
