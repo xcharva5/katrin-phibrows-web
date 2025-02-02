@@ -1,0 +1,39 @@
+/* MIXINS */
+@mixin slideFromLeft
+  animation: slideFromLeft 0.8s ease-in-out forwards
+
+@mixin slideFromRight
+  animation: slideFromRight 0.8s ease-in-out forwards
+
+@mixin gradientTextAnimation
+  animation: gradientTextAnimation 3s infinite
+
+/* KEYFRAMES */
+/* slide from left */
+@keyframes slideFromLeft
+  from
+    left: -100px
+    opacity: 0
+
+  to
+    left: 0
+    opacity: 1
+
+/* slide from right */
+@keyframes slideFromRight
+  from
+    right: -100px
+    opacity: 0
+
+  to
+    right: 0
+    opacity: 1
+
+/* gradient text animation */
+@keyframes gradientTextAnimation
+  0%
+    background-position: 0
+  50%
+    background-position: 100%
+  100%
+    background-position: 0

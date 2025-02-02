@@ -1,64 +1,58 @@
 @use '../../../../styles/variables' as variables
-
-@keyframes slideFromLeft
-  from
-    left: -300px
-    opacity: 0
-
-  to
-    left: 0
-    opacity: 1
-
-@keyframes slideFromRight
-  from
-    right: 300px
-    opacity: 0
-
-  to
-    left: 0
-    opacity: 1
-
-@keyframes gradient-animation
-  0%
-    background-position: 0
-  50%
-    background-position: 100%
-  100%
-    background-position: 0
+@use '../../../../styles/animations' as animations
 
 .section-home-wrapper
   margin-top: variables.$headerHeight
   background-color: variables.$ivory
   overflow: hidden
 
+.section-home-wrapper::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-image: url('/images/golden_background_2.jpg')
+  opacity: 0.6
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
 .section-home-left
+  @include animations.slideFromLeft
   min-height: calc(100vh - variables.$headerHeight)
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
   position: relative
-  left: -300px
+  left: -100px
   opacity: 0
-  animation: slideFromLeft 0.8s ease-in-out
-  animation-fill-mode: forwards
 
 .section-home-left img
-  max-width: 50%
+  max-width: 40%
   height: auto
-  opacity: 0.35
+  opacity: 0.40
 
 .section-home-left h1, h2
-  text-transform: capitalize
   font-family: variables.$headerFont
   background: linear-gradient(90deg, variables.$gold, variables.$darkGold)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
 
+.section-home-left h1
+  font-size: 3em
+
+.section-home-left h2
+  font-size: 1.8em
+  text-transform: uppercase
+  letter-spacing: 3px
+
 .section-home-left button
   font-family: variables.$textFont
-  font-size: 1.4em
+  font-size: 1.5em
   border: none
   color: variables.$ivory
   padding: 10px
@@ -67,10 +61,9 @@
   background-size: 300%
 
 .section-home-left button:hover
-  color: variables.$ivory
   background-position: right
   transform: scale(1.05)
-  animation: gradient-animation 3s infinite
+  @include animations.gradientTextAnimation
 
 .section-home-left button:active
   transform: scale(1)
@@ -81,10 +74,9 @@
   justify-content: center
   align-items: end
   position: relative
-  left: 500px
+  right: -100px
   opacity: 0
-  animation: slideFromRight 0.8s ease-in-out
-  animation-fill-mode: forwards
+  @include animations.slideFromRight
 
 .section-home-right img
   max-height: calc(100vh - variables.$headerHeight)
