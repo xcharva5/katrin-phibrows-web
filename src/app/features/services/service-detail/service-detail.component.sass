@@ -85,7 +85,6 @@ input[type='radio']
   font-family: variables.$headerFont
   text-transform: uppercase
   font-size: 1.5em
-  //letter-spacing: 1px
   font-weight: 600
 
 .service-detail-buttons
@@ -94,22 +93,12 @@ input[type='radio']
   margin-top: 40px
 
 .service-detail-buttons button
-  font-family: variables.$textFont
-  font-size: 1.4em
-  border: none
-  color: variables.$ivory
-  padding: 10px 25px
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
-  background: linear-gradient(90deg, variables.$gold, variables.$darkGold, variables.$gold)
-  background-size: 300%
+  @include variables.animatedButton
 
 .service-detail-buttons button:hover
   @include animations.gradientTextAnimation
-  color: variables.$ivory
-  background-position: right
-  transform: scale(1.05)
+  @include variables.animatedButtonHover
 
 .service-detail-buttons button:active
-  transform: scale(1)
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+  @include variables.animatedButtonActive
 

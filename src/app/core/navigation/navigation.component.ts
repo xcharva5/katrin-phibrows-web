@@ -17,10 +17,10 @@ export class NavigationComponent {
   readonly faFacebook = faFacebook;
 
   readonly availableSections: LinkLabelItem[]= [
-    {link: '', label: 'Domů'},
-    {link: 'sluzby', label: 'Služby'},
-    {link: 'o-me', label: 'O mě'},
-    {link: 'kontakt', label: 'Kontakt'}
+    {link: '', label: 'Domů', exactMatching: true},
+    {link: 'sluzby', label: 'Služby', exactMatching: false},
+    {link: 'o-me', label: 'O mě', exactMatching: false},
+    {link: 'kontakt', label: 'Kontakt', exactMatching: false}
   ]
 
   readonly availableSocialMedia: LinkIconItem[] = [

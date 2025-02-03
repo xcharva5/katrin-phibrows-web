@@ -2,7 +2,8 @@ import {IconDefinition} from '@fortawesome/angular-fontawesome';
 
 export interface LinkLabelItem {
   link: string,
-  label: string
+  label: string,
+  exactMatching: boolean
 }
 
 export interface LinkIconItem {
