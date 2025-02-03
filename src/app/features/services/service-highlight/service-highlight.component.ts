@@ -1,7 +1,7 @@
-import {Component, Input} from '@angular/core';
-import {NgIf} from '@angular/common';
-import {Router} from '@angular/router';
-import {Service} from '../../../shared/models/models';
+import { Component, Input } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
+import { Service } from '../../../shared/models/models';
 
 @Component({
   selector: 'app-service-highlight',

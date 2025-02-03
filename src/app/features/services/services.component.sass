@@ -1,25 +1,8 @@
 @use '../../../styles/variables' as variables
-
-@keyframes slideFromBottom
-  from
-    top: 100px
-    opacity: 0
-
-  to
-    top: 0
-    opacity: 1
+@use '../../../styles/animations' as animations
 
 .services-wrapper
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
+  padding: 20px 0
   background-color: variables.$ivory
-
-.services-header
-  font-family: variables.$headerFont
-  color: variables.$darkGray
-  font-size: 3em
-  letter-spacing: 5px
-  opacity: 0
-  position: relative
-  top: 100px
-  animation: slideFromBottom 0.8s ease-in-out forwards

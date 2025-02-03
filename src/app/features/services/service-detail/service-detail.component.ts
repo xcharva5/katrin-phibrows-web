@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../../shared/services/data.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Observable, of} from 'rxjs';
 import {AsyncPipe, CommonModule, NgForOf, NgIf} from '@angular/common';
 import {Service} from '../../../shared/models/models';
@@ -9,7 +9,7 @@ import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-service-detail',
-  imports: [AsyncPipe, NgIf, NgForOf, CommonModule, FaIconComponent],
+  imports: [AsyncPipe, NgIf, NgForOf, CommonModule, FaIconComponent, RouterLink],
   templateUrl: './service-detail.component.html',
   styleUrl: './service-detail.component.sass',
   standalone: true

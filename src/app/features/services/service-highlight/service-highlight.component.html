@@ -1,9 +1,9 @@
 <div *ngIf="service" class="card mb-3" (click)="goToServiceDetail(service.name)">
   <div class="row g-0">
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <img [src]="service.highlightImage.src" [alt]="service.highlightImage.alt" class="img-fluid rounded-start">
     </div>
-    <div class="col-md-8">
+    <div class="col-lg-8">
       <div class="card-body">
         <h5 class="card-title">{{ service.name }}</h5>
         <p class="card-text">{{ service.shortDescription }}</p>

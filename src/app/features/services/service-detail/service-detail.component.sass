@@ -1,37 +1,27 @@
 @use '../../../../styles/variables' as variables
-
-@keyframes gradient-animation
-  0%
-    background-position: 0
-  50%
-    background-position: 100%
-  100%
-    background-position: 0
+@use '../../../../styles/animations' as animations
 
 .service-detail-wrapper
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
-  padding-bottom: 40px
+  padding: 20px 0
   background-color: variables.$ivory
   font-family: variables.$textFont
-  font-size: 1.1em
+  font-size: 1.2em
 
 h1
   font-family: variables.$headerFont
-  letter-spacing: -1px
-  font-weight: 600
+  letter-spacing: 1px
+  font-weight: 500
   text-transform: uppercase
-  padding-top: 10px
 
 .carousel-wrapper
   display: flex
   justify-content: center
-  margin: 10px 0
+  margin: 15px 0
 
 .carousel
-  width: 60%
-  max-height: 300px
-  height: 300px
+  width: 70%
 
 @media only screen and (max-width: 992px)
   .carousel
@@ -59,7 +49,7 @@ h1
   display: flex
   align-items: center
   padding: 10px
-  font-size: 2em
+  font-size: 1.6em
   font-weight: 600
   cursor: pointer
   font-family: variables.$headerFont
@@ -94,8 +84,8 @@ input[type='radio']
 .accordion .content h2
   font-family: variables.$headerFont
   text-transform: uppercase
-  font-size: 1.7em
-  letter-spacing: -1px
+  font-size: 1.5em
+  //letter-spacing: 1px
   font-weight: 600
 
 .service-detail-buttons
@@ -114,10 +104,10 @@ input[type='radio']
   background-size: 300%
 
 .service-detail-buttons button:hover
+  @include animations.gradientTextAnimation
   color: variables.$ivory
   background-position: right
   transform: scale(1.05)
-  animation: gradient-animation 3s infinite
 
 .service-detail-buttons button:active
   transform: scale(1)
