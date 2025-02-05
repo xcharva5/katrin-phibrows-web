@@ -1,37 +1,21 @@
 @use '../../../styles/variables' as variables
+@use '../../../styles/animations' as animations
 
 .about-wrapper
+  @include variables.preparedForSlideFromBottom
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
+  padding: 20px 0
   background-color: variables.$ivory
-  padding-bottom: 40px
-  font-family: variables.$textFont
-  opacity: 0
-  position: relative
-  top: 100px
 
 .about-wrapper.visible
-  top: 0
-  animation: slideFromBottom 0.8s ease-in-out
-  animation-fill-mode: forwards
+  @include animations.slideFromBottom
 
-.about-header
-  font-family: variables.$headerFont
-  color: variables.$darkGray
-  font-size: 3em
-  letter-spacing: 5px
-
-@keyframes slideFromBottom
-  from
-    top: 100px
-    opacity: 0
-
-  to
-    top: 0
-    opacity: 1
+.about-wrapper h1
+  @include variables.sectionHeader
 
 .about-image
-  max-width: 60%
+  max-width: 65%
   height: auto
 
 .about-left
@@ -41,13 +25,12 @@
   align-items: center
 
 .about-left p
-  font-size: 1.3em
+  font-size: 1.5em
 
 .about-right
   display: flex
   justify-content: center
   align-items: end
-  //padding: 20px 0
 
 .about-right img
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
@@ -70,6 +53,8 @@
 .about-certificates a
   text-decoration: none
   color: variables.$darkGray
+  font-weight: 300
+  margin: 0 10px
 
 .about-certificates a:hover
   color: variables.$gold

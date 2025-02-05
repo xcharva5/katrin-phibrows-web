@@ -5,12 +5,12 @@
     <div *ngIf="personalInfo$ | async as personalInfo" class="about-content-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 about-left">
+          <div class="col-lg-8 about-left">
             <div *ngFor="let paragraph of personalInfo.text">
               <p>{{ paragraph }}</p>
             </div>
           </div>
-          <div class="col-lg-6 about-right">
+          <div class="col-lg-4 about-right">
             <img [src]="personalInfo.image.src" [alt]="personalInfo.image.alt" class="about-image">
           </div>
         </div>
@@ -18,7 +18,9 @@
           <h2>Certifikáty</h2>
           <ul>
             <li *ngFor="let certificate of personalInfo.certificates">
+              <fa-icon [icon]="faAnglesRight"></fa-icon>
               <a [href]="certificate.link" target="_blank">{{ certificate.certifier }} - {{ certificate.name }}</a>
+              <fa-icon [icon]="faAnglesLeft"></fa-icon>
             </li>
           </ul>
         </div>
