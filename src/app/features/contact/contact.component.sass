@@ -1,16 +1,22 @@
 @use '../../../styles/variables' as variables
+@use '../../../styles/animations' as animations
 
 .contact-wrapper
+  @include variables.preparedForSlideFromBottom
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
+  padding: 20px 0
   background-color: variables.$ivory
   font-family: variables.$textFont
-  font-size: 1.2em
   color: variables.$gold
+
+.contact-wrapper.visible
+  @include animations.slideFromBottom
 
 .contact-intro-text
   text-align: center
-  font-size: 1.5em
+  font-size: 2.2em
+  font-weight: 300
   padding: 20px
 
 .section-contact-left
@@ -18,6 +24,7 @@
   justify-content: center
   align-items: center
   padding: 20px 0
+  font-size: 1.5em
 
 .contact-info a
   color: variables.$gold
@@ -32,24 +39,19 @@
 .contact-info fa-icon
   padding-right: 10px
 
-.social-media-links fa-icon
-  padding-right: 20px
-
-.social-media-links fa-icon:hover
-  color: variables.$anthracite
-
 .section-contact-right
   display: flex
   justify-content: center
   align-items: center
-  height: 300px
-  width: 100%
+  padding: 20px 0
 
-.section-contact-right img
-  height: 80%
-  width: auto
-  object-fit: cover
-  opacity: 0.5
+.section-contact-right fa-icon
+  padding-right: 40px
+  color: variables.$gold
+  font-size: 2.2em
+
+.section-contact-right fa-icon:hover
+  color: variables.$anthracite
 
 .contact-map-wrapper
   display: flex
