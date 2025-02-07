@@ -1,20 +1,24 @@
 @use '../../../../styles/variables' as variables
+@use '../../../../styles/animations' as animations
 
 .section-references-wrapper
-  //min-height: calc(100vh - variables.$headerHeight)
-  scroll-margin-top: variables.$headerHeight
-  padding: 20px 0
+  padding: 30px 0
   background-color: variables.$beige
 
-.section-references-header
-  font-family: variables.$headerFont
-  color: variables.$darkGray
-  font-size: 3em
-  letter-spacing: 5px
+.section-references-wrapper h1
+  @include variables.sectionHeader
+  @include variables.preparedForSlideFromBottom
+
+.section-references-wrapper h1.visible
+  @include animations.slideFromBottom
 
 .references-testimonials
+  @include variables.preparedForSlideFromBottom
   display: flex
   align-items: center
+
+.references-testimonials.visible
+  @include animations.slideFromBottom
 
 .references-testimonials .card
   min-height: 200px
@@ -29,17 +33,21 @@
   justify-content: space-between
 
 .references-images
+  @include variables.preparedForSlideFromBottom
   display: flex
   align-items: center
   margin: 10px 0
 
+.references-images.visible
+  @include animations.slideFromBottom
+
 .carousel-inner
-  height: 400px
-  background-color: variables.$anthracite
+  height: 350px
+  background-color: transparent
 
 .carousel-item
-  height: 400px
-  background-color: variables.$anthracite
+  height: 350px
+  background-color: transparent
 
 .carousel-item-image-wrapper
   display: flex

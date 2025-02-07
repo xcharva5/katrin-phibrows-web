@@ -1,7 +1,6 @@
-<!-- TODO: add the image in different sizes to prevent downloading of big res img -->
 <section *ngIf="personalInfo$ | async as personalInfo" class="section-about-wrapper">
   <div class="container">
-    <h1 class="section-about-header text-center" [appVisibleClass]="'visible'">O mě</h1>
+    <h1 [appVisibleClass]="'visible'">O mě</h1>
     <div class="row">
       <div class="col-lg-6 about-section-left" [appVisibleClass]="'visible'">
         <div *ngFor="let paragraph of personalInfo.text">
