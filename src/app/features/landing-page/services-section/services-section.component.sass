@@ -5,9 +5,11 @@
   padding: 30px 0
   background-color: variables.$beige
 
-.section-services-wrapper h1
-  @include variables.sectionHeader
+.section-services-slide
   @include variables.preparedForSlideFromBottom
 
-.section-services-wrapper h1.visible
+.section-services-slide.visible
   @include animations.slideFromBottom
+
+.section-services-wrapper h1
+  @include variables.sectionHeader

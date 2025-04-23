@@ -1,18 +1,18 @@
 <section *ngIf="personalInfo$ | async as personalInfo" class="section-about-wrapper">
-  <div class="container">
-    <h1 [appVisibleClass]="'visible'">O mě</h1>
+  <div class="container section-about-slide" [appVisibleClass]="'visible'">
+    <h1>O mně</h1>
     <div class="row">
-      <div class="col-lg-6 about-section-left" [appVisibleClass]="'visible'">
+      <div class="col-lg-6 about-section-left">
         <div *ngFor="let paragraph of personalInfo.text">
           <p>{{ paragraph }}</p>
         </div>
         <div>
           <a href="#">
-            <a routerLink="/o-me" routerLinkActive="active"><button class="btn">Více o mě</button></a>
+            <a routerLink="/o-mne" routerLinkActive="active"><button class="btn">Více o mně</button></a>
           </a>
         </div>
       </div>
-      <div class="col-lg-6 about-section-right" [appVisibleClass]="'visible'">
+      <div class="col-lg-6 about-section-right">
         <img [src]="personalInfo.image.src" [alt]="personalInfo.image.alt" class="section-about-image">
       </div>
     </div>

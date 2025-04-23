@@ -2,13 +2,15 @@
 @use '../../../styles/animations' as animations
 
 .about-wrapper
-  @include variables.preparedForSlideFromBottom
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
   padding: 20px 0
   background-color: variables.$ivory
 
-.about-wrapper.visible
+.about-slide
+  @include variables.preparedForSlideFromBottom
+
+.about-slide.visible
   @include animations.slideFromBottom
 
 .about-image

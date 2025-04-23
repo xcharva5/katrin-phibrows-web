@@ -5,20 +5,18 @@
   padding: 30px 0
   background-color: variables.$beige
 
+.section-references-slide
+  @include variables.preparedForSlideFromBottom
+
+.section-references-slide.visible
+  @include animations.slideFromBottom
+
 .section-references-wrapper h1
   @include variables.sectionHeader
-  @include variables.preparedForSlideFromBottom
-
-.section-references-wrapper h1.visible
-  @include animations.slideFromBottom
 
 .references-testimonials
-  @include variables.preparedForSlideFromBottom
   display: flex
   align-items: center
-
-.references-testimonials.visible
-  @include animations.slideFromBottom
 
 .references-testimonials .card
   min-height: 200px
@@ -38,13 +36,9 @@
   justify-content: space-between
 
 .references-images
-  @include variables.preparedForSlideFromBottom
   display: flex
   align-items: center
   margin: 10px 0
-
-.references-images.visible
-  @include animations.slideFromBottom
 
 .carousel-inner
   height: 350px

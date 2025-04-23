@@ -2,7 +2,6 @@
 @use '../../../styles/animations' as animations
 
 .contact-wrapper
-  @include variables.preparedForSlideFromBottom
   min-height: calc(100vh - variables.$headerHeight)
   margin-top: variables.$headerHeight
   padding: 20px 0
@@ -10,7 +9,10 @@
   font-family: variables.$textFont
   color: variables.$gold
 
-.contact-wrapper.visible
+.contact-slide
+  @include variables.preparedForSlideFromBottom
+
+.contact-slide.visible
   @include animations.slideFromBottom
 
 .contact-intro-text

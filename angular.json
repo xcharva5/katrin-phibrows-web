@@ -26,10 +26,20 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": [
-              "src/assets/data",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/data",
+                "output": "/assets/data"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts",
+                "output": "/assets/fonts"
               }
             ],
             "styles": [
@@ -89,10 +99,20 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "sass",
             "assets": [
-              "src/assets/data",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/data",
+                "output": "/assets/data"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts",
+                "output": "/assets/fonts"
               }
             ],
             "styles": [

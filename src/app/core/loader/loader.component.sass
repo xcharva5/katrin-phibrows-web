@@ -1,0 +1,33 @@
+@use '../../../styles/variables' as variables
+
+$gradient1: no-repeat radial-gradient(circle closest-side, variables.$gold 90%, variables.$transparent) 0 50%
+$gradient2: no-repeat radial-gradient(circle closest-side, variables.$gold 90%, variables.$transparent) 50% 50%
+$gradient3: no-repeat radial-gradient(circle closest-side, variables.$gold 90%, variables.$transparent) 100% 50%
+
+.spinner-container
+  background: variables.$ivory
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 9999
+
+.full-page
+  position: fixed
+  inset: 0
+
+.loader
+  width: 80px
+  aspect-ratio: 2
+  background: $gradient1, $gradient2, $gradient3
+  background-size: calc(100%/3) 50%
+  animation: l3 1s infinite linear
+
+@keyframes l3
+  20%
+    background-position: 0 0, 50% 50%, 100% 50%
+  40%
+    background-position: 0 100%, 50% 0, 100% 50%
+  60%
+    background-position: 0 50%, 50% 100%, 100% 0
+  80%
+    background-position: 0 50%, 50% 50%, 100% 100%

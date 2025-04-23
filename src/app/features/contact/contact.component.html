@@ -1,8 +1,7 @@
-<div class="contact-wrapper" [appVisibleClass]="'visible'">
-  <div class="container">
-<!--    <h1 class="contact-header text-center">Kontakt</h1>-->
+<div class="contact-wrapper">
+  <div class="container contact-slide" [appVisibleClass]="'visible'">
     <div class="contact-intro-text">
-      <p>Pro rezervaci nebo bližší info mě neváhejte kontaktovat</p>
+      <p>Pro rezervaci nebo bližší info mně neváhejte kontaktovat</p>
     </div>
     <div class="contact-content-wrapper">
       <div class="container">
@@ -22,7 +21,7 @@
                 </p>
                 <p>
                   <fa-icon [icon]="faPhone"></fa-icon>
-                  <a href="tel:+420 123 456 789">+420 123 456 789</a>
+                  <a href="tel:+420 777 341 312">+420 777 341 312</a>
                 </p>
                 <p>
                   <fa-icon [icon]="faAt"></fa-icon>
@@ -32,15 +31,16 @@
             </div>
           </div>
 
-          <div class="col-lg-6 section-contact-right">
+          <div *ngIf="showSocialSites" class="col-lg-6 section-contact-right">
             <a href="#"><fa-icon [icon]="faInstagram" size="2x" class="section-contact-link"></fa-icon></a>
             <a href="#"><fa-icon [icon]="faFacebook" size="2x"></fa-icon></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="contact-map-wrapper">
-      <iframe src="https://en.frame.mapy.cz/s/felafudeze" ></iframe>
+    <app-loader *ngIf="isMapLoading"></app-loader>
+    <div [hidden]="isMapLoading" class="contact-map-wrapper">
+      <iframe src="https://en.frame.mapy.cz/s/felafudeze" (load)="onIFrameLoaded()"></iframe>
     </div>
   </div>
 </div>

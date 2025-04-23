@@ -3,6 +3,7 @@
 $white: #FFFFFF
 $beige: #F5F5DC // for background, to be soft and minimalistic
 $ivory: #FFFFF0 // for basic textures and lighter areas
+$transparent: #0000
 
 /* accent colors */
 $gold: #D4AF37 // a reference to luxury and precision, use it on buttons, headings or icons
@@ -14,13 +15,21 @@ $darkGray: #333333 // for text and navigation
 $anthracite: #555555 // for subtler undertones and contrasts
 
 /* FONTS */
-$logoFont: 'Birthstone', italic
-$headerFont: 'Playfair Display', serif
-$textFont: 'Open Sans', serif
+$logoFont: 'Birthstone', sans-serif
+$headerFont: 'OpenSans', serif
+$textFont: 'OpenSans', serif
 $additionalFont: Montserrat, serif
 
 /* WEBSITE-WIDE VALUES */
 $headerHeight: 79px
+
+@font-face
+  font-family: 'Birthstone'
+  src: url('/assets/fonts/Birthstone-Regular.ttf') format('truetype')
+
+@font-face
+  font-family: 'OpenSans'
+  src: url('/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype'), url('/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype')
 
 /* MIXINS */
 @mixin sectionHeader

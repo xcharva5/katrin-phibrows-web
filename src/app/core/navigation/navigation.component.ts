@@ -19,12 +19,13 @@ export class NavigationComponent {
   readonly availableSections: LinkLabelItem[]= [
     {link: '', label: 'Domů', exactMatching: true},
     {link: 'sluzby', label: 'Služby', exactMatching: false},
-    {link: 'o-me', label: 'O mě', exactMatching: false},
+    {link: 'o-mne', label: 'O mně', exactMatching: false},
     {link: 'kontakt', label: 'Kontakt', exactMatching: false}
   ]
 
   readonly availableSocialMedia: LinkIconItem[] = [
-    {link: '#', icon: this.faInstagram},
-    {link: '#', icon: this.faFacebook}
+    // TODO:
+    // {link: '#', icon: this.faInstagram},
+    // {link: '#', icon: this.faFacebook}
   ]
 }

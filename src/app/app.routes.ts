@@ -11,7 +11,7 @@ export const routes: Routes = [
   {path: 'sluzby', component: ServicesComponent},
   {path: 'sluzby/cenik', component: ServicePriceListComponent},
   {path: 'sluzby/:serviceName', component: ServiceDetailComponent},
-  {path: 'o-me', component: AboutComponent},
+  {path: 'o-mne', component: AboutComponent},
   {path: 'kontakt', component: ContactComponent},
   {path: '**', redirectTo: ''},
 ];
