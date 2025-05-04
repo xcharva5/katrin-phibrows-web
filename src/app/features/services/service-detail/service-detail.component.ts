@@ -6,6 +6,7 @@ import {AsyncPipe, CommonModule, NgForOf, NgIf} from '@angular/common';
 import {Service} from '../../../shared/models/models';
 import {faAnglesRight, faTriangleExclamation} from '@fortawesome/free-solid-svg-icons';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-service-detail',
@@ -23,12 +24,14 @@ export class ServiceDetailComponent implements OnInit {
 
   constructor(
     private readonly dataService: DataService,
-    private readonly activatedRoute: ActivatedRoute
+    private readonly activatedRoute: ActivatedRoute,
+    private readonly titleService: Title
   ) {
   }
 
   ngOnInit() {
     this.serviceName = this.activatedRoute.snapshot.paramMap.get('serviceName') ?? '';
     this.service$ = this.dataService.getServiceByName(this.serviceName);
+    this.titleService.setTitle('Katrin Phibrows: Služby');
   }
 }

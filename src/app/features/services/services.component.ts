@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ServiceListComponent} from './service-list/service-list.component';
 import {VisibleClassDirective} from '../../shared/directives/visible-class.directive';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-services',
@@ -9,6 +10,10 @@ import {VisibleClassDirective} from '../../shared/directives/visible-class.direc
   styleUrl: './services.component.sass',
   standalone: true
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit {
+  constructor(private readonly titleService: Title) { }
 
+  ngOnInit() {
+    this.titleService.setTitle('Katrin Phibrows: Služby');
+  }
 }
